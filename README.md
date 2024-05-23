@@ -21,6 +21,6 @@
 </ul>
 <h3 id="maintained-by">Maintained by</h3>
 <ul>
-<li>Debjit pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a></li>
+<li><strong>Faculty</strong>: Debjit pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a></li>
 </ul>
 
