@@ -14,16 +14,23 @@
 </ol>
 <h3 id="how-to-mount-the-software-repository">How to Mount the software repository?</h3>
 <p>Mount the software repository to your local Linux server (RHEL, CentOS, AlmaLinux, Ubuntu) using the following instructions.</p>
-<pre><code>su -
+<pre><code>su - 
 mkdir -pv /EDA_Tools
 vi /etc/fstab
 </code></pre>
-<p>Add the following line at the end of the <code>/etc/fstab</code></p>
+<p>or if you have sudo access, do the following. (<strong>CAUTION</strong>: Make sure you have legitimate sudo permission from your lab director. Great power, i.e., sudo power, comes with great responsibilities. Use it responsibly and wisely.)</p>
+<pre><code>sudo mkdir -pv /EDA_Tools
+sudo vi /etc/fstab
+</code></pre>
+<p>Add the following line at the end of the <code>/etc/fstab</code>, save the file and exit.</p>
 <pre><code>eda-software-01.ece.uic.edu:/tools/EDA_Tools    /EDA_Tools          nfs defaults,_netdev    0 0
 </code></pre>
 <p>Then mount the NFS partition using the following command.</p>
 <pre><code>mount -a
 systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
+</code></pre>
+<p>For those who have sudo access, do the following.</p>
+<pre><code>sudo mount -a
 </code></pre>
 <h3 id="who-can-mount-the-software-repository">Who can Mount the software repository?</h3>
 <p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>. After I receive your request, I will whitelist the server IP and will send you a confirmation.</p>
