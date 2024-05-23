@@ -1,0 +1,85 @@
+   Synopsys EDA Tool Tree <!-- BODY { font-family : ariel, monospace, sans-serif; } P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;} B { font-weight: normal; color: black; background-color: transparent;} A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; } A:link { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; } A:hover { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; } A:active { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; } .VERSION { font-size: small; font-family : arial, sans-serif; } .NORM { color: black; background-color: transparent;} .FIFO { color: purple; background-color: transparent;} .CHAR { color: yellow; background-color: transparent;} .DIR { color: blue; background-color: transparent;} .BLOCK { color: yellow; background-color: transparent;} .LINK { color: aqua; background-color: transparent;} .SOCK { color: fuchsia;background-color: transparent;} .EXEC { color: green; background-color: transparent;} -->
+
+Synopsys EDA Tool Tree
+======================
+
+[HTTP://eda-software-01.ece.uic.edu](HTTP://eda-software-01.ece.uic.edu)  
+├── [ale](HTTP://eda-software-01.ece.uic.edu/ale/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/ale/U-2022.12-SP7-3/)  
+├── [cck](HTTP://eda-software-01.ece.uic.edu/cck/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/cck/V-2023.12-SP1-1/)  
+├── [cf](HTTP://eda-software-01.ece.uic.edu/cf/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/cf/V-2023.12-SP1-1/)  
+├── [dftview](HTTP://eda-software-01.ece.uic.edu/dftview/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/dftview/U-2022.12-SP7-3/)  
+├── [hsim](HTTP://eda-software-01.ece.uic.edu/hsim/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/hsim/V-2023.12-SP1-1/)  
+├── [hspice](HTTP://eda-software-01.ece.uic.edu/hspice/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/hspice/V-2023.12-SP1-1/)  
+├── [icc](HTTP://eda-software-01.ece.uic.edu/icc/)  
+│   ├── [T-2022.03-SP5-6](HTTP://eda-software-01.ece.uic.edu/icc/T-2022.03-SP5-6/)  
+│   └── [V-2023.12-SP3](HTTP://eda-software-01.ece.uic.edu/icc/V-2023.12-SP3/)  
+├── [icc2](HTTP://eda-software-01.ece.uic.edu/icc2/)  
+│   └── [V-2023.12-SP3](HTTP://eda-software-01.ece.uic.edu/icc2/V-2023.12-SP3/)  
+├── [icvalidator](HTTP://eda-software-01.ece.uic.edu/icvalidator/)  
+│   └── [V-2023.12-SP1-3](HTTP://eda-software-01.ece.uic.edu/icvalidator/V-2023.12-SP1-3/)  
+├── [idq](HTTP://eda-software-01.ece.uic.edu/idq/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/idq/U-2022.12-SP7-3/)  
+├── [index.html](HTTP://eda-software-01.ece.uic.edu/index.html)  
+├── [prime](HTTP://eda-software-01.ece.uic.edu/prime/)  
+│   └── [V-2023.12-SP2](HTTP://eda-software-01.ece.uic.edu/prime/V-2023.12-SP2/)  
+├── [primesim\_ava](HTTP://eda-software-01.ece.uic.edu/primesim_ava/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/primesim_ava/V-2023.12-SP1-1/)  
+├── [primesim\_di](HTTP://eda-software-01.ece.uic.edu/primesim_di/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/primesim_di/V-2023.12-SP1-1/)  
+├── [primesim\_dr](HTTP://eda-software-01.ece.uic.edu/primesim_dr/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/primesim_dr/V-2023.12-SP1-1/)  
+├── [primesim\_emir](HTTP://eda-software-01.ece.uic.edu/primesim_emir/)  
+│   └── [V-2023.12-SP1-1](HTTP://eda-software-01.ece.uic.edu/primesim_emir/V-2023.12-SP1-1/)  
+├── [saber64](HTTP://eda-software-01.ece.uic.edu/saber64/)  
+│   └── [U-2023.06-3](HTTP://eda-software-01.ece.uic.edu/saber64/U-2023.06-3/)  
+├── [sentaurus](HTTP://eda-software-01.ece.uic.edu/sentaurus/)  
+│   ├── [current](HTTP://eda-software-01.ece.uic.edu/sentaurus/current/)  
+│   ├── [V-2023.12](HTTP://eda-software-01.ece.uic.edu/sentaurus/V-2023.12/)  
+│   └── [V-2024.03](HTTP://eda-software-01.ece.uic.edu/sentaurus/V-2024.03/)  
+├── [slitho](HTTP://eda-software-01.ece.uic.edu/slitho/)  
+│   └── [V-2023.12](HTTP://eda-software-01.ece.uic.edu/slitho/V-2023.12/)  
+├── [snps\_container](HTTP://eda-software-01.ece.uic.edu/snps_container/)  
+│   └── [1.8](HTTP://eda-software-01.ece.uic.edu/snps_container/1.8/)  
+├── [syn](HTTP://eda-software-01.ece.uic.edu/syn/)  
+│   ├── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/syn/U-2022.12-SP7-3/)  
+│   └── [V-2023.12-SP2](HTTP://eda-software-01.ece.uic.edu/syn/V-2023.12-SP2/)  
+├── [txs](HTTP://eda-software-01.ece.uic.edu/txs/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/txs/U-2022.12-SP7-3/)  
+├── [vcap](HTTP://eda-software-01.ece.uic.edu/vcap/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/vcap/U-2022.12-SP7-3/)  
+├── [vcs](HTTP://eda-software-01.ece.uic.edu/vcs/)  
+│   ├── [U-2023.03-SP2-4](HTTP://eda-software-01.ece.uic.edu/vcs/U-2023.03-SP2-4/)  
+│   └── [V-2023.12-1](HTTP://eda-software-01.ece.uic.edu/vcs/V-2023.12-1/)  
+├── [vc\_static](HTTP://eda-software-01.ece.uic.edu/vc_static/)  
+│   └── [V-2023.12-1](HTTP://eda-software-01.ece.uic.edu/vc_static/V-2023.12-1/)  
+├── [verdi](HTTP://eda-software-01.ece.uic.edu/verdi/)  
+│   └── [V-2023.12-1](HTTP://eda-software-01.ece.uic.edu/verdi/V-2023.12-1/)  
+├── [verdi\_supp](HTTP://eda-software-01.ece.uic.edu/verdi_supp/)  
+│   └── [V-2023.12-1](HTTP://eda-software-01.ece.uic.edu/verdi_supp/V-2023.12-1/)  
+├── [vgen](HTTP://eda-software-01.ece.uic.edu/vgen/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/vgen/U-2022.12-SP7-3/)  
+├── [virtualizer](HTTP://eda-software-01.ece.uic.edu/virtualizer/)  
+│   └── [U-2023.03-SP2](HTTP://eda-software-01.ece.uic.edu/virtualizer/U-2023.03-SP2/)  
+├── [virualizer\_runtime](HTTP://eda-software-01.ece.uic.edu/virualizer_runtime/)  
+├── [vtran](HTTP://eda-software-01.ece.uic.edu/vtran/)  
+│   └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/vtran/U-2022.12-SP7-3/)  
+└── [vui](HTTP://eda-software-01.ece.uic.edu/vui/)  
+    └── [U-2022.12-SP7-3](HTTP://eda-software-01.ece.uic.edu/vui/U-2022.12-SP7-3/)  
+  
+  
+
+66 directories, 1 file  
+  
+
+* * *
+
+tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore  
+HTML output hacked and copyleft © 1998 by Francesc Rocher  
+JSON output hacked and copyleft © 2014 by Florian Sesser  
+Charsets / OS/2 support © 2001 by Kyosuke Tokoro
