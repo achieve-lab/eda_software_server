@@ -12,7 +12,7 @@
 <li>No separate setup of Licesne strings. Transparent setup for an user.</li>
 <li><a href="https://github.com/achieve-lab/eda_software_server/issues">GitHub-based</a> issue tracking for software setups.</li>
 </ol>
-<h3 id="how-to-use-the-software-repository">How to Use the Software Repository</h3>
+<h3 id="how-to-mount-the-software-repository">How to Mount the software repository?</h3>
 <p>Mount the software repository to your local Linux server (RHEL, CentOS, AlmaLinux, Ubuntu) using the following instructions.</p>
 <pre><code>su -
 mkdir -pv /EDA_Tools
@@ -25,8 +25,8 @@ vi /etc/fstab
 <pre><code>mount -a
 systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
 </code></pre>
-<h3 id="who-can-mount-the-software-repository">Who can mount the software repository</h3>
-<p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>.</p>
+<h3 id="who-can-mount-the-software-repository">Who can Mount the software repository?</h3>
+<p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>. After I receive your request, I will whitelist the server IP and will send you a confirmation.</p>
 <h3 id="software-catalog">Software Catalog</h3>
 <ul>
 <li>Cadence Softwares</li>
