@@ -34,6 +34,12 @@ systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
 </code></pre>
 <h3 id="who-can-mount-the-software-repository">Who can Mount the software repository?</h3>
 <p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>. After I receive your request, I will whitelist the server IP and will send you a confirmation. I will only accept request for servers that are in ECE subnet, e.g., 10.48.48.*, 10.7.48.*, 131.193.50.*.</p>
+<h3 id="error-reporting">Error Reporting</h3>
+<p>We use GitHub  issue tracking to report, discuss, and provide solution to tool issues as encountered by the users. A centralized issue tracking will streamline the issue resolution, will help fellow users to solve same or similar issues quickly.</p>
+<ul>
+<li>Please use the following link to report an issue: <a href="https://github.com/achieve-lab/eda_software_server/issues">GitHub Issue Reporting</a></li>
+<li>Please follow the issue template as closely as possible.</li>
+</ul>
 <h3 id="software-catalog">Software Catalog</h3>
 <ul>
 <li>Cadence Softwares</li>
