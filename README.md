@@ -33,7 +33,7 @@ systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
 <pre><code>sudo mount -a
 </code></pre>
 <h3 id="who-can-mount-the-software-repository">Who can Mount the software repository?</h3>
-<p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>. After I receive your request, I will whitelist the server IP and will send you a confirmation.</p>
+<p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>. Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line. In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>. After I receive your request, I will whitelist the server IP and will send you a confirmation. I will only accept request for servers that are in ECE subnet, e.g., 10.48.48.*, 10.7.48.*, 131.193.50.*.</p>
 <h3 id="software-catalog">Software Catalog</h3>
 <ul>
 <li>Cadence Softwares</li>
