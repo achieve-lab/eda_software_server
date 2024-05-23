@@ -49,7 +49,7 @@ systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
 <h3 id="software-catalog">Software Catalog</h3>
 <ul>
 <li>Cadence Softwares</li>
-<li>Synopsys Software</li>
+<li><a href="https://github.com/achieve-lab/eda_software_server/tree/main/synopsys">Synopsys Software</a></li>
 <li>AMD Xilinx Softwares</li>
 <li>Intel Quartus Software</li>
 </ul>
