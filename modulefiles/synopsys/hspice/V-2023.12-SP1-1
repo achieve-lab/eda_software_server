@@ -1,0 +1,11 @@
+#%Module
+
+proc ModuleHelp { } { 
+    puts stderr "This module adds Synopsys VCS to your path."
+}
+
+module-whatis "This module adds Synopsys VCS to your path\n"
+set basedir "/EDA_Tools/Synopsys/hspice/V-2023.12-SP1-1"
+setenv HSPICE_HOME "${basedir}"
+prepend-path PATH $::env(HSPICE_HOME)/hspice/bin
+prepend-path LM_LICENSE_FILE "27000@10.7.46.20"

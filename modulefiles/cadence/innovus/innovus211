@@ -1,0 +1,15 @@
+#%Module
+
+proc ModuleHelp { } {
+    puts stderr "This module adds Cadence Innovus to your path."
+}
+
+module-whatis "This module adds Cadence Innovus to your path\n"
+set basedir "/EDA_Tools/Cadence/INNOVUS211"
+setenv install_dir "${basedir}"
+prepend-path PATH $::env(install_dir)/tools/bin
+prepend-path PATH $::env(install_dir)/tools/dfII/bin
+prepend-path PATH $::env(install_dir)/bin
+setenv OA_HOME "${basediric}/oa_v22.60.087"
+prepend-path PATH $::env(OA_HOME)/bin
+prepend-path LM_LICENSE_FILE "5280@cadenceuic.webstore.illinois.edu"

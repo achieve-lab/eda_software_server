@@ -1,0 +1,10 @@
+#%Module
+
+proc ModuleHelp { } { 
+    puts stderr "This module adds Synopsys IC Compiler to your path."
+}
+
+module-whatis "This module adds Synopsys IC Compiler to your path\n"
+set basedir "/EDA_Tools/Synopsys/icc/T-2022.03-SP5-6"
+prepend-path PATH ${basedir}/bin
+prepend-path LM_LICENSE_FILE "27000@10.7.46.20"

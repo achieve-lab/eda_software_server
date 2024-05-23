@@ -1,0 +1,11 @@
+#%Module
+
+proc ModuleHelp { } { 
+    puts stderr "This module adds Synopsys Design Compiler to your path."
+}
+
+module-whatis "This module adds Synopsys DEsign Compiler to your path\n"
+set basedir "/EDA_Tools/Synopsys/syn/V-2023.12-SP2"
+setenv DC_HOME "${basedir}"
+prepend-path PATH "${basedir}/bin"
+prepend-path LM_LICENSE_FILE "27000@10.7.46.20"

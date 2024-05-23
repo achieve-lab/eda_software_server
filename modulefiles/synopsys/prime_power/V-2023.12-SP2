@@ -1,0 +1,10 @@
+#%Module
+
+proc ModuleHelp { } { 
+    puts stderr "This module adds Synopsys VCS to your path."
+}
+
+module-whatis "This module adds Synopsys VCS to your path\n"
+set basedir "/EDA_Tools/Synopsys/prime/V-2023.12-SP2"
+prepend-path PATH "${basedir}/bin"
+prepend-path LM_LICENSE_FILE "27000@10.7.46.20"
