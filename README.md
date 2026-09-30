@@ -12,10 +12,10 @@ The following table details the IP addresses for all the PAL Achieve Lab Servers
 
 | Server Name | Local Filesystem | Remote Filesystem | 
 |----------|----------|----------| 
-| pal-achieve-01.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
-| pal-achieve-02.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
-| pal-achieve-03.ece.uic.edu | 1 TB (/scratch), 16 TB (/storage/1, /storage/2) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
-| pal-achieve-04.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
+| pal-achieve-01.ece.uic.edu | 1 TB (`/scratch`) | 5 TB (`/data/1, /data/2, /data/3, /data/4, /data/5`) | 
+| pal-achieve-02.ece.uic.edu | 1 TB (`/scratch`) | 5 TB (`/data/1, /data/2, /data/3, /data/4, /data/5`) | 
+| pal-achieve-03.ece.uic.edu | 1 TB (`/scratch`), 16 TB (`/storage/1, /storage/2`) | 5 TB (`/data/1, /data/2, /data/3, /data/4, /data/5`) | 
+| pal-achieve-04.ece.uic.edu | 1 TB (`/scratch`) | 5 TB (`/data/1, /data/2, /data/3, /data/4, /data/5`) | 
 
 
 ## How to connect to the servers?
