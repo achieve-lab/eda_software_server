@@ -90,3 +90,29 @@ Voila. You are ready to use AMD GPUs.
 ## Details of the available EDA software
 
 Details of the EDA softwares are available [here](./details/EDA.md)
+
+## Monitoring the GPUs with nvtop
+
+`nvtop` is an interactive, `htop`-style monitor for GPUs. For every GPU in the server it shows the current utilization, memory usage, temperature, power draw and PCIe throughput, a live graph of utilization and memory over the last ~50 seconds, and at the bottom the list of processes (PID, user, device, GPU memory, command) currently running on each GPU. Use it to check whether a GPU is free before starting a job, and to confirm that your job is actually running on the GPU you intended.
+
+To use it, load the module first.
+
+    module load nvtop/nvtop   # or another available version, see `module avail`
+    nvtop
+
+Press `q` (or F10) to quit.
+
+![nvtop on pal-achieve-03](./pic/nvtop.png)
+
+## GPU monitoring and numbering on pal-achieve-03
+
+pal-achieve-03 has 4 GPUs and the nvtop module (load it using module load nvtop/nvtop or nvtop/[other version]) lists all of them:
+
+| nvtop Device | GPU | Memory |
+|----------|----------|----------|
+| Device 0 | AMD Radeon AI PRO R9700 | 32 GB |
+| Device 1 | AMD Radeon AI PRO R9700 | 32 GB |
+| Device 2 | NVIDIA RTX 6000 Ada Generation | 48 GB |
+| Device 3 | NVIDIA RTX 6000 Ada Generation | 48 GB |
+
+**Pay attention: the device numbering inside PyTorch is NOT the same as the numbering in nvtop.** When using CUDA (`module load python-cuda/3.12cuda13`), PyTorch only sees the two NVIDIA GPUs, so `cuda:0` in your code is **Device 2** in nvtop, and `cuda:1` is **Device 3**. When checking on your CUDA Pytorch job in nvtop, look at Device 2 and Device 3, not Device 0 and 1.
