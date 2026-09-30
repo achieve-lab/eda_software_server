@@ -57,6 +57,36 @@ To unload a software
 To view GPU Calendar: [GPU Calendar](https://outlook.office365.com/owa/calendar/39750c3bb71543ea97ac0add10b67f13@uic.edu/3dfa0f8be8d54bd696e76506153ebbce3272411645614296831/calendar.html)\
 To book pn GPU Calendar: Book on the shared calendar. The calendar has been shared with you via your email.
 
+## Details of the AMD ROCm Software Stack
+
+    module load python-rocm/3.12rocm7.2
+
+Use the following code to test availability of the AMD GPUs in your environment.
+
+    python3 -c '
+    import torch
+    print("PyTorch Version:", torch.__version__)
+    print("HIP / ROCm Available:", torch.cuda.is_available())
+    if torch.cuda.is_available():
+        print("Device Name:", torch.cuda.get_device_name(1))
+        print("Device Count:", torch.cuda.device_count())
+        # Quick tensor allocation test on the R9700
+        x = torch.randn(1000, 1000, device="cuda")
+        y = torch.matmul(x, x)
+        print("Compute Test Passed! Matrix shape:", y.shape)
+
+You should see something like the following.
+
+![AMD Output]()./pic/python_output_amd.png)
+
+Voila. You are ready to use AMD GPUs.\
+
+**Please do not create your own Virtual Environments. Use this centralized virtual environment. Inside PyTorch, AMD GPUs are still identified via cuda string, so nothing to worry.**
+
+## Details of the NVIDIA CUDA Software Stack
+
+   module load python-cuda/3.12cuda13
+
 ## Details of the available EDA software
 
 Details of the EDA softwares are available [here](./details/EDA.md)
