@@ -53,6 +53,10 @@ To unload a software
 
 ## Calendar to Book GPU Access
 
-**You should book a calendar for your GPU job.**
-To view GPU Calendar: [GPU Calendar](https://outlook.office365.com/owa/calendar/39750c3bb71543ea97ac0add10b67f13@uic.edu/3dfa0f8be8d54bd696e76506153ebbce3272411645614296831/calendar.html)
-To book pn GPU Calendar: Book on the shared calendar.
+**You should book a calendar for your GPU job.**\
+To view GPU Calendar: [GPU Calendar](https://outlook.office365.com/owa/calendar/39750c3bb71543ea97ac0add10b67f13@uic.edu/3dfa0f8be8d54bd696e76506153ebbce3272411645614296831/calendar.html)\
+To book pn GPU Calendar: Book on the shared calendar. The calendar has been shared with you via your email.
+
+## Details of the available EDA software
+
+Details of the EDA softwares are available ![here](./details/EDA.md)
