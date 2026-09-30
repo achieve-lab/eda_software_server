@@ -1,60 +1,58 @@
----
+﻿# Instructions for Using Pal-ACHIEVE Lab Servers
+
+The following table details the IP addresses for all the PAL Achieve Lab Servers. 
+| Server Name | Server IP | Server Processor | Server Memory | Server Capability | OS |
+|----------|----------|----------| ----------| ----------| ----------| 
+| pal-achieve-01.ece.uic.edu | 10.7.48.77 | Intel(R) Xeon(R) CPU  X5482  @ 3.20GHz | 24GB | Simple Compute Server for EDA Tools | RHEL 8.10 |
+| pal-achieve-02.ece.uic.edu | 10.7.48.235 |  Intel(R) Xeon(R) CPU  X5482  @ 3.20GHz | 24GB | AMD VCK 5000 FPGA, FPGA Compilation, FPGA EMulation, Simple Compute Server for EDA Tools,  | RHEL 8.10 |
+| pal-achieve-03.ece.uic.edu | 10.7.48.87 | Intel(R) Xeon(R) w9-3495X | 1 TB | 2 NVIDIA 6000 Ada Lovelace GPUs, 2 AMD Radeon™ AI PRO R9700, ML/DL Training, FPGA Compilation | RHEL 9.8 |
+| pal-achieve-04.ece.uic.edu | 10.7.48.65 | Intel(R) Xeon(R) w5-3433 | 512 GB | 2 AMD U55C FPGAs, 1 AMD U250 FPGA, NVIDIA T400, ML/DL Training, FPGA Compilation, FPGA Emulation | RHEL 8.10 | 
+
+# File System
+
+| Server Name | Local Filesystem | Remote Filesystem | 
+|----------|----------|----------| 
+| pal-achieve-01.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
+| pal-achieve-02.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
+| pal-achieve-03.ece.uic.edu | 1 TB (/scratch), 16 TB (/storage/1, /storage/2) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
+| pal-achieve-04.ece.uic.edu | 1 TB (/scratch) | 5 TB (/data/1, /data/2, /data/3, /data/4, /data/5) | 
 
 
----
+## How to connect to the servers?
 
-<h1 id="welcome-to-ece-eda-software-repository-for-research-purposes-only">Welcome to ECE EDA Software Repository (for Research Purposes only)</h1>
-<p>Welcome to the EDA Software Repository in ECE. This repositoty houses major Electronic Design Softwares from Synopsys, Cadence, AMD-Xilinx, and Intel Altera. The key features of the repository are as follow.</p>
-<ol>
-<li>Hosted centrally and mountable to ECE client machines via Unix Network File System or NFS. The server is currently hosted using AlmaLinux 8.9 using NFS V4.0.</li>
-<li>Central maintenance, no major additional maintenance needed in the client server. Its a mount-and-use repository. Overall setup time is less than 5 minutes. Accessible to all users in the client server.</li>
-<li><a href="https://modules.sourceforge.net/">Environment Module-based</a> no fuss setup. Portable across bash, csh, tcsh, zsh, and other commonly used shells. No maintanenace of separate .bashrc, .tchsrc, or .zshrc. Environment module allows a dynamic and plastic work environment with on-demand access of necessary tools.</li>
-<li>No separate setup of Licesne strings. Transparent setup for an user.</li>
-<li><a href="https://github.com/achieve-lab/eda_software_server/issues">GitHub-based</a> issue tracking for software setups.</li>
-</ol>
-<h3 id="how-to-mount-the-software-repository">How to Mount the software repository?</h3>
-<p>Mount the software repository to your local Linux server (RHEL, CentOS, AlmaLinux, Ubuntu) using the following instructions.</p>
-<pre><code>su - 
-mkdir -pv /EDA_Tools
-vi /etc/fstab
-</code></pre>
-<p>or if you have sudo access, do the following. (<strong>CAUTION</strong>: Make sure you have legitimate sudo permission from your lab director. Great power, i.e., sudo power, comes with great responsibilities. Use it responsibly and wisely.)</p>
-<pre><code>sudo mkdir -pv /EDA_Tools
-sudo vi /etc/fstab
-</code></pre>
-<p>Add the following line at the end of the <code>/etc/fstab</code>, save the file and exit.</p>
-<pre><code>eda-software-01.ece.uic.edu:/tools/EDA_Tools    /EDA_Tools          nfs defaults,_netdev    0 0
-</code></pre>
-<p>Then mount the NFS partition using the following command.</p>
-<pre><code>mount -a
-systemctl daemon-reload (only for RHEL/CentOS/AlmaLinux)
-</code></pre>
-<p>For those who have sudo access, do the following.</p>
-<pre><code>sudo mount -a
-</code></pre>
-<h3 id="who-can-mount-the-software-repository">Who can Mount the software repository?</h3>
-<p>As of now, the repository is available on request. This is to ensure that the server is not flooded with unknown traffic. If  you like to use the repository, please send an email to Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a>.</p>
-<ul>
-<li>Please include <strong>[EDA Software Server Access Request]: Lab Name</strong> in the subject line.</li>
-<li>In the email body, please provide the <strong>server IP</strong> and the <strong>server OS</strong>.</li>
-<li>After I receive your request, I will whitelist the server IP and will send you a confirmation.</li>
-</ul>
-<p>I will only accept request for servers that are in ECE subnet, e.g., 10.48.48.*, 10.7.48.*, 131.193.50.*.</p>
-<h3 id="error-reporting">Error Reporting</h3>
-<p>We use GitHub  issue tracking to report, discuss, and provide solution to tool issues as encountered by the users. A centralized issue tracking will streamline the issue resolution, will help fellow users to solve same or similar issues quickly.</p>
-<ul>
-<li>Please use the following link to report an issue: <a href="https://github.com/achieve-lab/eda_software_server/issues">GitHub Issue Reporting</a></li>
-<li>Please follow the issue template as closely as possible.</li>
-</ul>
-<h3 id="software-catalog">Software Catalog</h3>
-<ul>
-<li>Cadence Softwares</li>
-<li><a href="https://github.com/achieve-lab/eda_software_server/tree/main/synopsys">Synopsys Software</a></li>
-<li>AMD Xilinx Softwares</li>
-<li>Intel Quartus Software</li>
-</ul>
-<h3 id="maintained-by">Maintained by</h3>
-<ul>
-<li><strong>Faculty</strong>: Debjit Pal <a href="mailto:dpal2@uic.edu">(dpal2@uic.edu)</a></li>
-</ul>
+Once you are added to the pal-achieve LDAP and the ECE CoE VPN, connect to UIC VPN using CISCO AnyConnect. More information to connect to UIC VPN is available [here](https://it.uic.edu/services/faculty-staff/uic-network/uic-vpn/). Once you are connected to UIC VPN, connect to the approrpriate server using the IP address given in the above Tabel.
 
+## Where to work in the servers?
+
+Once you are logged in, do the following.
+
+    cd /scratch
+    mkdir -pv <NetID> # It is paramount that you make the directory with your NetID and NetID only
+    cd <NetID> # This is your work directory (/scratch/<NetID>, e.g., /scratch/dpal2, use this for coding etc)
+    cd /storage/1/
+    mkdir -pv <NetID> # Meant for storing large model storage, like LLMs. Set your HF or other Cache Directory to /storage/1/<NetID> (e.g., /storage/1/dpal2)
+
+ 1. **DO NOT STORE ANYTHING IN YOUR HOME DIRECTORY. IT WILL CREATE INSTABILITY.** 
+ 2. **Clean up space as you are done with your work. Space is limited and shared acorss many students. You can backup your data in Box. Ask me (Debjit) for a dedicated directory in Box to save your data if you are working with me. If you are working with any advisor, backup approrpiately.**
+ 3. **Use Python Virtual Environment for your work. Under any circusmstances, root or sudo permission will not be given.**
+
+## What are the available softwares?
+To see availble softwares
+
+    module avail
+
+![Available Software](https://photos.app.goo.gl/85ma4mX6nWZ8WpJcA)
+
+To load a software
+
+    module load <module_name> # (module load python/3.12)
+
+To unload a software
+
+    module unload <module_name> #(module unload python/3.12)
+
+## Calendar to Book GPU Access
+
+**You should book a calendar for your GPU job.**
+To view GPU Calendar: [GPU Calendar](https://outlook.office365.com/owa/calendar/39750c3bb71543ea97ac0add10b67f13@uic.edu/3dfa0f8be8d54bd696e76506153ebbce3272411645614296831/calendar.html)
+To book pn GPU Calendar: Book on the shared calendar.
