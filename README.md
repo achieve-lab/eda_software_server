@@ -79,13 +79,13 @@ You should see something like the following.
 
 ![AMD Output](./pic/python_output_amd.png)
 
-Voila. You are ready to use AMD GPUs.\
+Voila. You are ready to use AMD GPUs.
 
 **Please do not create your own Virtual Environments. Use this centralized virtual environment. Inside PyTorch, AMD GPUs are still identified via cuda string, so nothing to worry.**
 
 ## Details of the NVIDIA CUDA Software Stack
 
-   module load python-cuda/3.12cuda13
+    module load python-cuda/3.12cuda13
 
 ## Details of the available EDA software
 
