@@ -116,3 +116,33 @@ pal-achieve-03 has 4 GPUs and the nvtop module (load it using module load nvtop/
 | Device 3 | NVIDIA RTX 6000 Ada Generation | 48 GB |
 
 **Pay attention: the device numbering inside PyTorch is NOT the same as the numbering in nvtop.** When using CUDA (`module load python-cuda/3.12cuda13`), PyTorch only sees the two NVIDIA GPUs, so `cuda:0` in your code is **Device 2** in nvtop, and `cuda:1` is **Device 3**. When checking on your CUDA Pytorch job in nvtop, look at Device 2 and Device 3, not Device 0 and 1.
+
+
+## Monitoring the FPGAs on pal-achieve-04
+
+pal-achieve-04 has three AMD/Xilinx FPGAs: two Alveo U55C and one Alveo U250. They are managed through XRT (Xilinx Runtime). Before running any XRT or Vitis command, you **must** source the XRT setup script in your shell. It sets `XILINX_XRT`, and adds the XRT tools (`xrt-smi`, `xbmgmt`) and the Vitis/Vivado 2024.1 tools to your `PATH`, `LD_LIBRARY_PATH` and `PYTHONPATH`.
+
+    source /opt/xilinx/xrt/setup.sh
+
+You need to do this in every new shell session (or add it to your `~/.bashrc`).
+
+To see the state of the FPGAs, run
+
+    xrt-smi examine
+
+This prints the system configuration, the XRT version, and a `Device(s) Present` table with one row per FPGA. On pal-achieve-04 you should see the following.
+
+| BDF | Board | Shell |
+|----------|----------|----------|
+| 0000:16:00.1 | Alveo U55C | xilinx_u55c_gen3x16_xdma_base_3 |
+| 0000:34:00.1 | Alveo U55C | xilinx_u55c_gen3x16_xdma_base_3 |
+| 0000:ca:00.1 | Alveo U250 | xilinx_u250_gen3x16_xdma_shell_4_1 |
+
+The **BDF** (PCIe bus:device.function) is the address you use to refer to a specific FPGA, and the **Shell** is the platform loaded on the card which your Vitis kernels must be compiled against. The `Device Ready` column should say `Yes` for every card; if it does not, the card is not usable and you should let me us know.
+
+To look at one card in detail, pass its BDF.
+
+    xrt-smi examine -d 0000:16:00.1          # basic info for the first U55C
+    xrt-smi examine -d 0000:16:00.1 -r all   # full report (memory, thermal, power, loaded xclbin, ...)
+
+This only covers checking the cards. **For a complete explanation of the FPGAs, the Vitis environment, and how to compile and run kernels, follow the lab's Xilinx tutorial: [https://github.com/achieve-lab/xilinx_tutorial](https://github.com/achieve-lab/xilinx_tutorial)**
