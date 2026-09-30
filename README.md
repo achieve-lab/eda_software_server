@@ -77,7 +77,7 @@ Use the following code to test availability of the AMD GPUs in your environment.
 
 You should see something like the following.
 
-![AMD Output]()./pic/python_output_amd.png)
+![AMD Output](./pic/python_output_amd.png)
 
 Voila. You are ready to use AMD GPUs.\
 
