@@ -41,7 +41,7 @@ To see availble softwares
 
     module avail
 
-![Available Software](https://photos.app.goo.gl/85ma4mX6nWZ8WpJcA)
+![Available Software](./pic/available_software.png)
 
 To load a software
 
