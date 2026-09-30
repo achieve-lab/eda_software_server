@@ -59,4 +59,4 @@ To book pn GPU Calendar: Book on the shared calendar. The calendar has been shar
 
 ## Details of the available EDA software
 
-Details of the EDA softwares are available ![here](./details/EDA.md)
+Details of the EDA softwares are available [here](./details/EDA.md)
