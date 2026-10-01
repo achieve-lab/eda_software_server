@@ -145,4 +145,7 @@ To look at one card in detail, pass its BDF.
     xrt-smi examine -d 0000:16:00.1          # basic info for the first U55C
     xrt-smi examine -d 0000:16:00.1 -r all   # full report (memory, thermal, power, loaded xclbin, ...)
 
+To monitor each card, along with the temperature of each component, the total power, and the overall status, use this tool:
+/Software/Software/nmon/16p/monitor_xrt_smi.sh
+
 This only covers checking the cards. **For a complete explanation of the FPGAs, the Vitis environment, and how to compile and run kernels, follow the lab's Xilinx tutorial: [https://github.com/achieve-lab/xilinx_tutorial](https://github.com/achieve-lab/xilinx_tutorial)**
