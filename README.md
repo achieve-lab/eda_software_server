@@ -87,6 +87,52 @@ Voila. You are ready to use AMD GPUs.
 
     module load python-cuda/3.12cuda13
 
+Use the following code to test availability of the NVIDI GPUs in your environment.
+
+```python
+import subprocess
+import sys
+import torch
+
+print(f"PyTorch {torch.__version__} | CUDA {torch.version.cuda}")
+if not torch.cuda.is_available():
+    sys.exit("FAIL: torch.cuda.is_available() is False")
+
+# Devices torch sees
+n = torch.cuda.device_count()
+print(f"torch sees {n} device(s):")
+for i in range(n):
+    p = torch.cuda.get_device_properties(i)
+    print(f"  cuda:{i}  {p.name}  {p.total_memory / 1024**3:.1f} GB")
+
+# Compare against what the driver sees (nvidia-smi), if available
+try:
+    smi = subprocess.run(["nvidia-smi", "-L"], capture_output=True, text=True).stdout
+    smi_n = len([l for l in smi.splitlines() if l.startswith("GPU")])
+    status = "OK" if smi_n == n else "MISMATCH (check CUDA_VISIBLE_DEVICES)"
+    print(f"nvidia-smi sees {smi_n} device(s): {status}")
+except FileNotFoundError:
+    print("nvidia-smi not found, skipping driver count check")
+
+# Matmul on cuda:0 and cuda:1, checked against CPU
+failed = False
+for idx in (0, 1):
+    dev = f"cuda:{idx}"
+    if idx >= n:
+        print(f"{dev}: FAIL (device not present)")
+        failed = True
+        continue
+    a = torch.randn(1024, 1024)
+    b = torch.randn(1024, 1024)
+    c = (a.to(dev) @ b.to(dev))
+    torch.cuda.synchronize(dev)
+    ok = torch.allclose(c.cpu(), a @ b, rtol=1e-3, atol=1e-3)
+    print(f"{dev}: matmul {'PASS' if ok else 'FAIL (result mismatch)'}")
+    failed |= not ok
+
+sys.exit(1 if failed else 0)
+```
+
 ## Details of the available EDA software
 
 Details of the EDA softwares are available [here](./details/EDA.md)
