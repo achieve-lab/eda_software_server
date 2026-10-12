@@ -51,6 +51,32 @@ To unload a software
 
     module unload <module_name> #(module unload python/3.12)
 
+## Running your jobs: nice and CPU/memory monitoring
+
+**Use `nice` for all your jobs.** The nice value controls the CPU priority of a process. The range is -20 to 19. A high nice value gives a low priority. Referr to this [Guide](https://www.geeksforgeeks.org/linux-unix/nice-and-renice-command-in-linux-with-examples/) for more details.
+
+To start a job with a nice value of 15:
+
+    nice -n 15 <cmd>
+
+To see the PID and the nice value (column `NI`) of your processes:
+
+    ps -o pid,ni,cmd -u $USER
+
+To change the nice value of a job that you already started:
+
+    renice -n <new nice value> -p <PID>
+
+To change the nice value of all your processes:
+
+    renice -n <new nice value> -u $USER
+
+**NOTE:** You can only increase the nice value of a process. You cannot decrease it.
+
+**Before you start a job on pal-achieve-03 or pal-achieve-04, use this script, to monitor the per-core CPU Usage, and available/used RAM:**
+
+    /Software/Software/nmon/16p/monitor_cpu_memory.sh
+
 ## Calendar to Book GPU Access
 
 **You should book a calendar for your GPU job.**\
